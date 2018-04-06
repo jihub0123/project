@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TMS - 사원관리시스템</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+  <!-- 달력 ui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/tms.css">
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/tms.js"></script>
+</head>
+<body>
+  <!-- 로그인 페이지 -->
+  <header>
+    <h1 class="indexh1">사원 관리 시스템</h1>
+  </header>
+  <section class="margin55">
+    <form class="loginform container">
+      <div class="form-group">
+        <label for="exampleInputEmail1">사원 번호</label>
+        <input type="id" class="form-control" id="exampleInputEmail1" placeholder="사원 번호 4자리">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">비밀번호</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호를 입력하세요">
+      </div>
+      <button type="button" class="btn btn-default login" onclick="location.href='list.html'">로그인</button>
+      <a href="" data-toggle="modal" data-target="#myModal">비밀번호 찾기</a>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">비밀번호 찾기</h4>
+      </div>
+      <div class="modal-body">
+        사원번호 입력 <input type="text" name="" value="" style="border-radius:3px;">
+        <hr>
+        <p class="passser hide">비밀번호: 0417</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default del1" data-dismiss="modal">닫기</button>
+        <button type="button" class="btn btn-primary ser1">찾기</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </form>
+  </section>
+  <footer>
+    Copyright &copy; jihun All rights reserved
+  </footer>
+  <!-- js -->
+  <script>
+  $('section .modal-footer .ser1').click(function(){
+    $('section .modal-body p').removeClass('hide').addClass('show');
+  })
+  $('section .modal-footer .del1').click(function(){
+    $('section .modal-body p').removeClass('show').addClass('hide');
+  })
+  </script>
+</body>
+</html>

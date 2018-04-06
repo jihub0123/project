@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TMS - 사원관리시스템</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+  <!-- 달력 ui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/tms.css">
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/tms.js"></script>
+</head>
+<body>
+  <!-- 사원목록 -->
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <a class="navbar-brand" href="#">TMS - 사원관리시스템</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" onclick="location.href='list.html'">사원목록 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#" onclick="location.href='insert.html'">사원등록</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">정지훈 로그인중..</a></li>
+            <li><a href="#" onclick="location.href='index.html'">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="margin80">
+    <h3 class="container">사원 목록</h3>
+    <div class="input-group">
+      <input class="form-control" placeholder="검색" />
+      <span class="input-group-btn">
+	<button class="btn btn-secondary" type="button">찾기</button>
+  </span>
+    </div>
+    <hr>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>사원번호</th>
+          <th>이름</th>
+          <th>부서명</th>
+          <th>입사 날짜</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1000</th>
+          <td><a href="detail.html">정지훈</a></td>
+          <td>고객만족팀</td>
+          <td>2018-04-17</td>
+        </tr>
+        <tr>
+          <th scope="row">1001</th>
+          <td><a href="detail.html">이해환</a></td>
+          <td>영업1팀</td>
+          <td>2018-04-18</td>
+        </tr>
+        <tr>
+          <th scope="row">1002</th>
+          <td><a href="detail.html">박선미</a></td>
+          <td>영업2팀</td>
+          <td>2018-04-19</td>
+        </tr>
+        <tr>
+          <th scope="row">1003</th>
+          <td><a href="detail.html">전유리</a></td>
+          <td>개발팀</td>
+          <td>2018-05-11</td>
+        </tr>
+        <tr>
+          <th scope="row">1004</th>
+          <td><a href="detail.html">강동만</a></td>
+          <td>영업1팀</td>
+          <td>2018-05-02</td>
+        </tr>
+        <tr>
+          <th scope="row">1005</th>
+          <td><a href="detail.html">박태오</a></td>
+          <td>인사과</td>
+          <td>2018-05-07</td>
+        </tr>
+        <tr>
+          <th scope="row">1006</th>
+          <td><a href="detail.html">박연</a></td>
+          <td>기술지원팀</td>
+          <td>2018-05-20</td>
+        </tr>
+        <tr>
+          <th scope="row">1007</th>
+          <td><a href="detail.html">최수인</a></td>
+          <td>기술지원팀</td>
+          <td>2018-05-21</td>
+        </tr>
+        <tr>
+          <th scope="row">1008</th>
+          <td><a href="detail.html">박선익</a></td>
+          <td>영업2팀</td>
+          <td>2018-06-01</td>
+        </tr>
+        <tr>
+          <th scope="row">1009</th>
+          <td><a href="detail.html">jihun</a></td>
+          <td>고객만족팀</td>
+          <td>2018-11-28</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="pagination">
+      <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+      <li class="one"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+      <li class="one"><a href="#">2 <span class="sr-only">(current)</span></a></li>
+      <li class="one"><a href="#">3 <span class="sr-only">(current)</span></a></li>
+      <li class="one"><a href="#">4 <span class="sr-only">(current)</span></a></li>
+      <li class="one"><a href="#">5 <span class="sr-only">(current)</span></a></li>
+      <li class=""><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+    </ul>
+  </section>
+  <footer>
+    Copyright &copy; jihun All rights reserved
+  </footer>
+  <script>
+    $('.pagination .one').click(function(){
+      $('.pagination .one').removeClass('active');
+      $(this).addClass('active');
+    })
+  </script>
+</body>
+</html>

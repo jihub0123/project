@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TMS - 사원관리시스템</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+  <!-- 달력 ui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/tms.css">
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/tms.js"></script>
+</head>
+<body>
+  <!-- 사원 상세 -->
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <a class="navbar-brand" href="#">TMS - 사원관리시스템</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#" onclick="location.href='list.html'">사원목록 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#" onclick="location.href='insert.html'">사원등록</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">정지훈 로그인중..</a></li>
+            <li><a href="#" onclick="location.href='index.html'">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="margin75">
+    <h3 class="container">사원 상세</h3>
+    <hr>
+    <form class="form-horizontal container">
+      <div class="form-group ">
+        <label for="readNum" class="col-sm-2 control-label">사원 번호</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control detail-form" id="readNum" value="1000" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readName" class="col-sm-2 control-label">이름</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control detail-form" id="readName" value="정지훈" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readDept" class="col-sm-2 control-label">부서</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control detail-form" id="readDept" value="고객만족팀" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readSal" class="col-sm-2 control-label">연봉</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control detail-form" id="readSal" value="1500" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readdate" class="col-sm-2 control-label">입사일</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control detail-form" id="readdate" value="2018-04-17" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" class="btn btn-primary" onclick="location.href='update.html'">수정하기</button>
+          <button type="button" class="btn btn-primary" onclick="location.href='list.html'">뒤로</button>
+          <!-- <button type="button" class="btn btn-danger" onclick="location.href='list.html'">삭제</button> -->
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#del">삭제</button>
+          <!-- Modal -->
+          <div class="modal fade" id="del" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">삭제 하시겠습니까?</h4>
+                </div>
+                <div class="modal-body">
+                  삭제 하려면 삭제 클릭.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                  <button type="button" class="btn btn-danger" onclick="location.href='list.html'">삭제</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div>
+    </div>
+  </section>
+  <footer>
+    Copyright &copy; jihun All rights reserved
+  </footer>
+</body>
+
+</html>

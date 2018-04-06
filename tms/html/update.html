@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TMS - 사원관리시스템</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+  <!-- 달력 ui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/tms.css">
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/tms.js"></script>
+</head>
+<body>
+  <!-- 사원 수정 -->
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <a class="navbar-brand" href="#">TMS - 사원관리시스템</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#" onclick="location.href='list.html'">사원목록 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#" onclick="location.href='insert.html'">사원등록</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="" >정지훈 로그인중..</a></li>
+            <li><a href="#" onclick="location.href='index.html'">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="margin75 container">
+    <h3>사원 수정</h3>
+    <hr>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="readNum" class="col-sm-2 control-label">사원 번호</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control update-form" id="readNum" value="1000" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readName" class="col-sm-2 control-label">이름</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control update-form" id="readName" value="정지훈">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readDept" class="col-sm-2 control-label">부서</label>
+        <div class="col-sm-10">
+          <div class="dropdown">
+            <select class="form-control update-form">
+			        <option>고객만족팀</option>
+		      	  <option>개발부</option>
+      			  <option>고객만족팀</option>
+      			  <option>인사과</option>
+      			  <option>기술지원팀</option>
+      			  <option>영업1팀</option>
+      			  <option>영업2팀</option>
+		      	</select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readSal" class="col-sm-2 control-label">연봉</label>
+        <div class="col-sm-10">
+          <div class="dropdown">
+            <select class="form-control update-form">
+      			  <option>1500</option>
+      			  <option>2000</option>
+      			  <option>2200</option>
+      			  <option>2400</option>
+      			  <option>2600</option>
+      			  <option>2800</option>
+      			  <option>3000</option>
+      			</select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="readdate" class="col-sm-2 control-label">입사일</label>
+        <div class="col-sm-10">
+          <input type="text" id="calendar" class="form-control update-form" placeholder="2017-04-17">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary" onclick="location.href='update.html'">저장</button>
+          <button type="button" class="btn btn-primary" onclick="location.href='detail.html'">뒤로</button>
+          <button type="reset" class="btn btn-danger">초기화</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <footer>
+    Copyright &copy; jihun All rights reserved
+  </footer>
+</body>
+</html>

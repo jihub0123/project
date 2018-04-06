@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TMS - 사원관리시스템</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+  <!-- 달력 ui -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/tms.css">
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/tms.js"></script>
+</head>
+<body>
+  <!-- 사원 등록 -->
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">네비게이션</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+          <a class="navbar-brand" href="#">TMS - 사원관리시스템</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#" onclick="location.href='list.html'">사원목록 <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#" onclick="location.href='insert.html'">사원등록</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">정지훈 로그인중..</a></li>
+            <li><a href="#" onclick="location.href='index.html'">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="container margin55">
+    <h3 class="container">사원 등록</h3>
+    <hr>
+    <form class="form-horizontal insert-form">
+      <div class="form-group">
+        <label for="inputNum" class="col-sm-2 control-label">사원 번호</label>
+        <div class="col-sm-10">
+          <div class="form-inline">
+            <input type="text" class="form-control" id="inputNum" placeholder="사원 번호를 입력하세요">
+            <button type="button" class="btn btn-primary">중복확인</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputName" class="col-sm-2 control-label">이름</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputName" placeholder="이름을 입력하세요">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPass" class="col-sm-2 control-label">비밀번호</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPass" placeholder="비밀번호를 입력하세요">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputDept" class="col-sm-2 control-label">부서</label>
+        <div class="col-sm-10">
+          <div class="dropdown">
+            <select class="form-control">
+			        <option>부서를 선택하세요</option>
+		      	  <option>개발부</option>
+      			  <option>고객만족팀</option>
+      			  <option>인사과</option>
+      			  <option>기술지원팀</option>
+      			  <option>영업1팀</option>
+      			  <option>영업2팀</option>
+		      	</select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputSal" class="col-sm-2 control-label">연봉</label>
+        <div class="col-sm-10">
+          <div class="dropdown">
+            <select class="form-control">
+      			  <option>연봉을 선택하세요</option>
+      			  <option>2000</option>
+      			  <option>2200</option>
+      			  <option>2400</option>
+      			  <option>2600</option>
+      			  <option>2800</option>
+      			  <option>3000</option>
+      			</select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputCal" class="col-sm-2 control-label">입사일</label>
+        <div class="col-sm-10">
+          <input type="text" id="calendar" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary" onclick="location.href='list.html'">등록</button>
+          <button type="reset" class="btn btn-warning">다시 작성</button>
+          <button type="button" class="btn btn-default" onclick="location.href='list.html'">취소</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <footer>
+    Copyright &copy; jihun All rights reserved
+  </footer>
+</body>
+</html>

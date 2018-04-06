@@ -1,0 +1,19 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+html, body {height: 100%;}
+header .navbar {position: fixed; top: 0; width: 100%; z-index: 100;}
+section h3 {font-weight: bold;}
+footer {height: 50px; background: #000000; color: #ffffff; text-align: center; padding: 15px; width: 100%; position: absolute; bottom: 0px; margin: 0;}
+.detail-form {width: 150px;}
+.indexh1 {text-align: center; font-weight: bold; margin-bottom: 178px;}
+.margin55 {margin-top: 55px;}
+.margin75 {margin-top: 75px;}
+.margin80 {margin-top: 80px;}
+.login {float: right;}
+.loginform {width: 500px;}
+.insert-form {margin-top: 100px; width: 600px;}
+.set1 {margin-bottom: 15px;}
+.update-form {width: 300px;}
+.pagination {float: right; margin-right: 50%; transform: translateX(50%);}
+.pagination li a:hover {background: skyblue;}
+.input-group {width: 200px; float: right; transform: translateY(-70%);}
